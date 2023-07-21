@@ -7,6 +7,8 @@
   --ocean: #404bbf;
   --slate: #434455;
   --white: #ffffff;
+  --grey: #2e2f42;
+  --lightslate: #8e8f99;
 }
 
 * {
@@ -147,6 +149,15 @@ body {
 
 .hero-section {
   background: var(--navyblue, #2e2f42);
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-section {
@@ -193,9 +204,15 @@ body {
 }
 
 /* Benefits Section */
-.benefits-container {
+.benefits-svg-icons {
   display: flex;
+  background: var(--cloud, #f4f4fd);
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
   justify-content: center;
+  align-items: center;
+  border-radius: 4px;
 }
 
 .benefits-list {
@@ -284,8 +301,60 @@ body {
 
   padding: 32px 16px;
 }
+
+.our-team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.our-team-icon-item {
+  width: 40px;
+  height: 40px;
+}
+
+.our-team-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  color: var(--iris);
+  background-color: var(--iris);
+}
+
+.our-team-icon {
+  fill: var(--cloud);
+}
 /* End of our team section */
-/* ------------------------------------------- Studio --------------------------------------- */
+
+/* Client Section */
+.client-list {
+  display: flex;
+  gap: 24px;
+}
+
+.client-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightslate);
+  border: 1px solid var(--lightslate);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
+.client-icon-link:hover,
+.client-icon-link:focus {
+  color: var(--ocean);
+  border-color: var(--ocean);
+}
+/* end of Client section */
+/* ------------------------------------------- end of Studio --------------------------------------- */
 
 /* ------------------------------------------- Portfolio --------------------------------------- */
 .button-list {
@@ -352,6 +421,16 @@ body {
   padding: 23px 16px;
   width: 100%;
   border: 1px solid var(--cornflower, #e7e9fc);
+}
+
+.card-content:hover,
+.card-content:focus {
+  border: 1px solid var(--cloud, #f4f4fd);
+  background: var(--white, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  cursor: pointer;
 }
 
 .card-title {
